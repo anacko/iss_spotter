@@ -47,7 +47,8 @@ const nextISSTimesForMyLocation = function(callback) {
           dateObj = new Date(elem.risetime*1000);
           timesStr.push("Next pass at " + dateObj + " for " + elem.duration + " seconds.");
         }
-        timesStr = timesStr.join(`\n`)
+        timesStr = timesStr.join(`\n`);
+
         callback(null, timesStr);
       });
     });
